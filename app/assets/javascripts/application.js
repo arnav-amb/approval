@@ -30,6 +30,7 @@ function submit_f(){
 						}
 						else{
 							console.log("FAIL")
+							console.log(result.reason)
 						}
 					},
 				});
