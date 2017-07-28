@@ -1,7 +1,11 @@
-
+<h3 align="center">Student Information</h3>
+<div class="container">
+	<div class="row">
+		<div class="card-panel">
+			<div class="container">
 			<%= form_for @student, url: {action: "create"} do |f| %>
 					Name
-					<%= f.text_field :name %><br/>
+					<%= f.text_field :name  %><br/>
 					Roll No.
 					<%= f.text_field :roll_no %><br/>
 					Email
@@ -15,3 +19,7 @@
 					<br/>
 					<%= f.submit "Create" ,class: "btn btn-primary"%>
 			<% end %>
+		</div>
+	</div>
+</div>
+</div>
