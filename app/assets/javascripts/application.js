@@ -16,3 +16,22 @@
 //= require materialize-sprockets
 //= require turbolinks
 //= require_tree .
+
+function submit_f(){
+	var token = arguments[2];
+	$.ajax({
+					type: "POST",
+					url: "/register"+"?&authenticity_token=" + token,
+					beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+					data: {"roll": arguments[0], "company":arguments[1]},
+					success: function(result){
+						if(result.status==='OK'){
+							console.log("ALL OK")
+						}
+						else{
+							console.log("FAIL")
+						}
+					},
+				});
+
+}
