@@ -1,0 +1,17 @@
+
+			<%= form_for @student, url: {action: "create"} do |f| %>
+					Name
+					<%= f.text_field :name %><br/>
+					Roll No.
+					<%= f.text_field :roll_no %><br/>
+					Email
+					<%= f.email_field :email %><br/>
+					Department
+					<%= f.text_field :dept %><br/>
+					Phone Np.
+					<%= f.text_field :phone %><br/>
+					CGPA
+					<%= f.text_field :cgpa %>
+					<br/>
+					<%= f.submit "Create" ,class: "btn btn-primary"%>
+			<% end %>

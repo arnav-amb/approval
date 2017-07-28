@@ -17,7 +17,9 @@
 
             <h6><%= company[:offer] %></h6>
             <blockquote><%= company[:description] %></blockquote>
-            <span style="margin-top: 30%;" class="card-title activator">Apply<i class="material-icons right">more_vert</i></span>
+            <h6><b>Eligible Departments</b></h6>
+            <%= company[:departments] %>
+            <span style="margin-top: 10%;" class="card-title activator">Apply<i class="material-icons right">more_vert</i></span>
           </div>
           <div class="card-reveal">
             <span class="card-title">FORM<i class="material-icons right">close</i></span>

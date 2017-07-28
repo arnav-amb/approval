@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'student/new' => 'student#new'
+  post 'student/create' => 'student#create'
   get 'home/index'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
