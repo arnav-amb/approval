@@ -2,7 +2,7 @@ ActiveAdmin.register Student do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
- permit_params :name, :email, :roll_no, :phone, :dept, :cgpa, :pan, :address, :xth, :xiith
+ permit_params :name, :email, :roll_no, :phone, :dept, :cgpa, :reg_no, :pan, :address, :xth, :xiith, :reg_no
  index do
    column :name
    column :email
