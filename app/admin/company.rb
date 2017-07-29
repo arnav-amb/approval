@@ -15,6 +15,24 @@ index do
   column :departments
   actions
 end
+
+member_action :export, method: :get do
+end
+
+controller do
+
+  def export
+    company = Company.find_by_id(params[:id])
+    r = company.registrations
+    s_id = []
+    r.each do |r|
+      s_id << r.student_id
+    end
+    students = Student.where(id:s_id).order(:dept)
+    render partial: 'exportlist', locals: {students: students}
+  end
+
+end
 # permit_params do
 #   permitted = [:permitted, :attributes]
 #   permitted << :other if params[:action] == 'create' && current_user.admin?

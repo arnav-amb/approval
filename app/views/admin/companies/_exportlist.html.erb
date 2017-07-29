@@ -1,0 +1,13 @@
+<table class="bordered">
+  <tr><th>Name</th><th>Roll No.</th><th>Department</th><th>CGPA</th><th>E-Mail</th><th>Phone No.</th></tr>
+  <% students.each do |student| %>
+    <tr>
+      <td><%= student[:name] %></td>
+      <td><%= student[:roll_no] %></td>
+      <td><%= student[:dept] %></td>
+      <td><%= student[:cgpa] %></td>
+      <td><%= student[:email] %></td>
+      <td><%= student[:phone] %></td>
+    </tr>
+  <% end %>
+</table>

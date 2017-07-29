@@ -1,0 +1,9 @@
+<table>
+<% companies.each_slice(6) do |slice| %>
+    <tr>
+      <% slice.each do |company| %>
+        <td><a href="/admin/companies/<%=company[:id]%>/export"><%= company[:name] %></a></td>
+      <% end %>
+    </tr>
+<% end %>
+</table>
