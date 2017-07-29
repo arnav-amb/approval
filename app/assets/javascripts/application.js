@@ -19,6 +19,7 @@
 
 function submit_f(){
 	var token = arguments[2];
+	var company = arguments[1];
 	$.ajax({
 					type: "POST",
 					url: "/register"+"?&authenticity_token=" + token,
@@ -26,11 +27,18 @@ function submit_f(){
 					data: {"roll": arguments[0], "company":arguments[1]},
 					success: function(result){
 						if(result.status==='OK'){
-							console.log("ALL OK")
+							$('#flash').html('<b>Successfully Registered for '+company+'</b>')
+							// $('#flash').css('background-color: #41d016; color:#ffffff')
+							$('#flash').delay(500).fadeIn('normal', function() {
+      					$(this).delay(2500).fadeOut();
+   					  });
 						}
 						else{
-							console.log("FAIL")
-							console.log(result.reason)
+							$('#flash').html('<b>Error: ' + result.reason + '</b>')
+							// $('#flash').css('background-color: #e61313; color:#ffffff')
+							$('#flash').delay(500).fadeIn('normal', function() {
+      					$(this).delay(2500).fadeOut();
+   					  });
 						}
 					},
 				});

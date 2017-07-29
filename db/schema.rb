@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170728120952) do
+ActiveRecord::Schema.define(version: 20170729075443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,6 +76,10 @@ ActiveRecord::Schema.define(version: 20170728120952) do
     t.float "cgpa"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "pan"
+    t.text "address"
+    t.string "xth"
+    t.string "xiith"
   end
 
   add_foreign_key "registrations", "companies"

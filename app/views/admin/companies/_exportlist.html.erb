@@ -1,5 +1,15 @@
 <table class="bordered">
-  <tr><th>Name</th><th>Roll No.</th><th>Department</th><th>CGPA</th><th>E-Mail</th><th>Phone No.</th></tr>
+  <tr><th>Name</th>
+    <th>Roll No.</th>
+    <th>Department</th>
+    <th>CGPA</th>
+    <th>E-Mail</th>
+    <th>Phone No.</th>
+    <th>Xth Percentage</th>
+    <th>XIIth Percentage</th>
+    <th>Address</th>
+    <th>PAN No.</th>
+  </tr>
   <% students.each do |student| %>
     <tr>
       <td><%= student[:name] %></td>
@@ -8,6 +18,10 @@
       <td><%= student[:cgpa] %></td>
       <td><%= student[:email] %></td>
       <td><%= student[:phone] %></td>
+      <td><%= student[:xth] %></td>
+      <td><%= student[:xiith] %></td>
+      <td><%= student[:address] %></td>
+      <td><%= student[:pan] %></td>
     </tr>
   <% end %>
 </table>
