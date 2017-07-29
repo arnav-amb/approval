@@ -28,18 +28,18 @@
           <div class="card-reveal">
             <span class="card-title">FORM<i class="material-icons right">close</i></span>
 
-              <input placeholder="15/IT/XX" id="roll_<%=company[:name]%>" type="text">
+              <input placeholder="15/IT/XX" id="roll_<%=company[:id_name]%>" type="text">
               <!-- <%= hidden_field_tag(:company, "#{company[:name]}") %> -->
-              <a class="waves-effect waves-light btn" id="<%=company[:name] %>" >Submit</a>
+              <a class="waves-effect waves-light btn" id="<%=company[:id_name] %>" >Submit</a>
 
           </div>
         </div>
       </div>
       <script>
       $(document).ready(function(){
-          $("#<%= company[:name] %>").click(function(){
-              var roll = $("#roll_<%=company[:name]%>").val()
-              var company = "<%= company[:name]%>"
+          $("#<%= company[:id_name] %>").click(function(){
+              var roll = $("#roll_<%=company[:id_name]%>").val()
+              var company = "<%= company[:id_name]%>"
               var token = $('meta[name=csrf-token]').attr('content');
               submit_f(roll,company,token);
 
