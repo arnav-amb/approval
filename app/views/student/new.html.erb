@@ -5,28 +5,30 @@
 			<div class="container">
 				<blockquote>We know you are a brillant hacker save you skills for the interviews.<br/>
 					P.S. Don't dont show your hacking abilities here</blockquote>
+					* = Required
 			<%= form_for @student, url: {action: "create"} do |f| %>
-					<b>Name</b>
+
+					<b>Name *</b>
 					<%= f.text_field :name, placeholder: "Ryan Bates" %><br/>
-					<b>Roll No.</b>
+					<b>Roll No. *</b>
 					<%= f.text_field :roll_no, placeholder: "15/IT/XX"%><br/>
-					<b>Registration No.</b><br/>
+					<b>Registration No. *</b><br/>
 					<%= f.text_field :reg_no, placeholder: "20150XXX"%><br/>
-					<b>Email</b>
+					<b>Email *</b>
 					<%= f.email_field :email, placeholder: "someone@example.com"%><br/>
-					<b>Department</b> (2 letter department)
+					<b>Department *</b> (2 letter department)
 					<%= f.text_field :dept, placeholder: "IT" %><br/>
-					<b>Phone No.</b> (10 digits only)
+					<b>Phone No. *</b> (10 digits only)
 					<%= f.text_field :phone, placeholder:"9123456780" %><br/>
-					<b>CGPA</b> (upto 2 decimal places)
+					<b>CGPA *</b> (upto 2 decimal places) for Supple leave blank
 					<%= f.text_field :cgpa, placeholder: "4.25" %><br/>
-					<b>PAN No.</b> (N for Not Available)
+					<b>PAN No. *</b> (N for Not Available)
 					<%= f.text_field :pan %><br/>
-					<b>Address</b>
+					<b>Address *</b> (Permanent Address)
 					<%= f.text_field :address %><br/>
-					<b>Xth Percentage</b> (For C.B.S.E multiply CGPA by 9.5)
+					<b>Xth Percentage *</b> (For C.B.S.E multiply CGPA by 9.5)
 					<%= f.text_field :xth, placeholder:"78.45" %><br/>
-					<b>XIIth Percentage</b>
+					<b>XIIth Percentage *</b>
 					<%= f.text_field :xiith, placeholder:"78.45" %><br/>
 					<%= f.submit "Create" ,class: "btn btn-primary"%>
 			<% end %>
