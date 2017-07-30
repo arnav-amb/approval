@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170729164859) do
+ActiveRecord::Schema.define(version: 20170730033512) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(version: 20170729164859) do
     t.string "xth"
     t.string "xiith"
     t.string "reg_no"
+    t.index ["roll_no"], name: "index_students_on_roll_no", unique: true
   end
 
   add_foreign_key "registrations", "companies"
