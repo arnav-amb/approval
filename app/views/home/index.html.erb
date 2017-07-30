@@ -4,9 +4,7 @@
 <div class="card">
   <span class="card-title">NIT Durgapur Placements/Interns</span>
 </div>
-<div style="padding: 2%;">
-  <p id="flash"></p>
-</div>
+
 
 <div class="container"> <!-- main container-->
 
@@ -27,7 +25,9 @@
           </div>
           <div class="card-reveal">
             <span class="card-title">FORM<i class="material-icons right">close</i></span>
-
+              <div>
+                <p id="flash_<%=company[:id_name]%>"></p>
+              </div>
               <input placeholder="15/IT/XX" id="roll_<%=company[:id_name]%>" type="text">
               <!-- <%= hidden_field_tag(:company, "#{company[:name]}") %> -->
               <a class="waves-effect waves-light btn" id="<%=company[:id_name] %>" >Submit</a>
